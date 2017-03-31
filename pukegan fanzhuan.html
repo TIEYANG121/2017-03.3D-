@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			position: 0;
+
+		}
+		.box{
+			width: 500px;
+			height: 500px;
+			perspective: 500px;
+			border: 10px solid blue;
+			position: relative;
+			margin: 100px auto;
+
+		}
+		.box1{
+			width: 300px;
+			height: 500px;
+			transition:transform 5s;
+		transform-style: preserve-3d;
+		transform-origin: center;
+
+		}
+		.p1,.p2{
+			position: absolute;
+			margin-left: 100px;
+		}
+		.p1{
+		backface-visibility: hidden;
+		}
+		.p2{
+			transform: rotateY(180deg);
+		}
+		
+		.p1:hover{
+			transform:rotateY(180deg);
+			backface-visibility: hidden;
+		}
+		.box:hover .box1{
+			transform: rotateY(180deg);
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="box1">
+			<div class="p1">
+				<img src="E:\前端脱产班\1703脱产班\3-20\images/front.jpg." alt="">
+			</div>
+			<div class="p2">
+				<img src="E:\前端脱产班\1703脱产班\3-20\images/back.jpg" alt="">
+			</div>
+		</div>
+	</div>
+</body>
+</html>
